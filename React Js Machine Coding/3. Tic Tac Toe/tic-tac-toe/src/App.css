@@ -1,0 +1,159 @@
+body{
+  position: relative;
+  overflow: hidden;
+  background-image: url('/public/tic-tac-toe-image-2.jpg');
+  background-size: cover;  /* Ensures the image covers the whole element */
+  background-position: center;  /* Centers the image within the element */
+  background-repeat: no-repeat;  /* Prevents the image from repeating */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* status message */
+.status-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+
+.status-heading {
+  width: 400px;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  background-color: gainsboro;
+  border: 5px solid grey;
+  color: green;
+}
+
+/* Player container */
+.player-form-container {
+  position: relative;
+  background-color: gainsboro;
+  border-radius: 10px;
+  padding: 10px;
+  width: 50%;
+  height: 30vh;
+}
+
+.player-input-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.player-input {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  font-family: inherit;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+.display-board, .reset {
+  padding: 15px;
+  bottom: 10px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #000;
+  font-family: inherit;
+}
+
+.reset{
+  padding: 10px;
+  text-align: center;
+}
+
+.display-board {
+  position: absolute;
+  transform: translate(-50%, 0%);
+}
+
+/* board conatiner */
+
+h1 {
+  text-align: center;
+  
+}
+
+.box-container, .player-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-container {
+  box-sizing: border-box;
+  width: 40%;
+  border-radius: 10px;
+  background-color: gainsboro;
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+section {
+  display: grid;
+  width: 40%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.board-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.79);
+  background-color: #3cb371;
+  border-radius: 10px;
+}
+
+.container {
+  background-color: #000;
+  width: 100%;
+  height: 150px;
+  border: 1px solid grey;
+  cursor: pointer;
+  color: #fff;
+  font-size: 80px;
+  transition: all 0.8s ease;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.container:hover {
+  background-color: #505050;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.container:nth-child(1) {
+  border-radius: 10px 0px 0px 0px;
+}
+.container:nth-child(3) {
+  border-radius: 0px 10px 0px 0px;
+}
+.container:nth-child(7) {
+  border-radius: 0px 0px 0px 10px;
+}
+.container:nth-child(9) {
+  border-radius: 0px 0px 10px 0px;
+}

@@ -1,10 +1,12 @@
 import FirstPagination from "./components/firstPagination/firstPagination";
+import SecondPagination from "./components/secondPagination/SecondPagination";
 
 
 function App() {
   return (
     <>
-      <FirstPagination />
+      {/* <FirstPagination /> */}
+      <SecondPagination />
     </>
   );
 }
